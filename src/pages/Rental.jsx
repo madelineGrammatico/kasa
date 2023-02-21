@@ -1,5 +1,7 @@
 import data from "../logements"
 import { useParams } from "react-router-dom"
+import Dropdown from "../components/Dropdown"
+
 export default function Rental() {
     let { id } = useParams()
     console.log( id )
@@ -9,6 +11,7 @@ export default function Rental() {
         <div>
             <p>ceci est une location </p>
             <p>{rental.title}</p>
+            <Dropdown title="description" body="body" active="false"/>
         </div>
     )
 }

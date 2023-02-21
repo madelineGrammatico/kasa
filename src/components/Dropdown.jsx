@@ -1,12 +1,13 @@
 
-export default function Dropdown(title, body) {
+export default function Dropdown(props) {
+    console.log(props)
   return (
     <article>
         <header className="dropdown__header">
-            <h2>{title}</h2> <i></i>
+            <h2>{props.title}</h2> <i></i>
         </header>
         <div className="dropdown__body">
-            <p>{body}</p>
+            <p>{props.body}</p>
         </div>
     </article>
   )
