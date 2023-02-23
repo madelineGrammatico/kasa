@@ -1,8 +1,10 @@
-import data from "../logements"
-import { Link } from "react-router-dom"
+import 
+{ Link,
+  useLoaderData } from "react-router-dom"
+
 export default function Gallery() {
-
-
+  const data = useLoaderData()
+  
   return (
     <section className="gallery">
         {data.map((rental) => (
