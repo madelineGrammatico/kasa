@@ -1,10 +1,11 @@
-import data from "../logements"
+// import data from "../logements"
 import Gallery from "../components/Gallery"
+import NavBar from "../components/NavBar";
 
-console.log(data)
 function Home() {
   return (
     <div className="Home">
+      <NavBar/>
       <Gallery/>
     </div>
   );

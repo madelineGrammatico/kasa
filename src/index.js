@@ -7,35 +7,33 @@ import './sass/index.scss';
 import Home from './pages/Home';
 import About from './pages/About';
 import Page404 from './pages/Page404';
-import Rental, {rentalLoader} from './pages/Rental';
+import {Rental} from './pages/Rental';
 
-// import {rentalLoader} from './routes/rentalLoader';
+import data from "./logements.json"
+
 import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home/>,
-    loader: async () => {
-       const res = await fetch("./logement.json");
-       return  res.json()
-    },
-    children: [
-      {
-        element: <Rental/>,
-        path: "rental/:id",
-        loader: rentalLoader
-      },
-      {
-        path: "/about",
-        element: <About/>
-      },
-      {
-        path: "/*",
-        element: <Page404/>
-      }
-    ],
+    loader: () => {return data}
   },
+  {
+    path: "about",
+    element: <About/>
+  },
+  {
+    path: "rental/:id",
+    loader: ({params}) => { return data.filter((rental) => (
+        rental.id === params.id.slice(1) ))
+    },
+    element: <Rental/>,
+  }, 
+  {
+    path: "*",
+    element: <Page404/>
+  }
   
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(

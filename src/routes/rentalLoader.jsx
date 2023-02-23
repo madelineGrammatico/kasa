@@ -1,10 +1,13 @@
-import { useParams } from "react-router-dom";
-
-export function rentalLoader() {
-    let {id} = useParams
+// import { useParams, 
+//      useRouteLoaderData} from "react-router-dom"
 
 
-    return (
-        fetch(`../logements/${id}.json`)
-    )
-}
+
+    // export const rentalLoader = () => {
+    //     // const data = useRouteLoaderData("root")
+    //     // console.log(data)
+        
+    //     // const rentals = data.map((rental) => {return rental})
+    //     return "rentals"
+    
+    // }
