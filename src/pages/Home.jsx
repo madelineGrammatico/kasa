@@ -1,10 +1,11 @@
 import data from "../logements"
 import Gallery from "../components/Gallery"
+import { Banner } from "../components/Banner";
 
-console.log(data)
 function Home() {
   return (
     <div className="Home">
+      <Banner/>
       <Gallery/>
     </div>
   );
