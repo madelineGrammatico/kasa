@@ -11,7 +11,7 @@ export default function Rating(props) {
   return (
     <section className='rating'>
       {range.map((number) => 
-        rating >= number ? <Star className="star"alt="star"/> : <Star className="starEmpty"/>
+        rating >= number ? <Star className="star"alt="star" key={number}/> : <Star className="starEmpty" key={number+"star"}/>
       )}
     </section>
   )

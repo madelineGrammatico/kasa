@@ -1,13 +1,15 @@
 .rating {
     height: 3rem;
+    display: flex;
+    justify-content: flex-end;
     .star {
         width: 2rem;
-        height: 3rem;
+        height: 2rem;
         fill:#FF6060;
     }
     .starEmpty {
         width: 2rem;
-        height: 3rem;
+        height: 2rem;
         fill: #E3E3E3;
     }
 }

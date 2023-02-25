@@ -4,7 +4,7 @@ export default function Tag(props) {
   const tags = props.tags
   return (
   <section className='tags__container'>
-    {tags.map((tag) => { return (<div className='tag'>{tag}</div>) }
+    {tags.map((tag, index) => { return (<div className='tag' key={index+"tag"}>{tag}</div>) }
     )}
     
   </section>

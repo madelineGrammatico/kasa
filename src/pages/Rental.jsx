@@ -12,23 +12,25 @@ export function Rental() {
     const rent = data[0]
 
     return (
-        <div>
+        <>
             <NavBar/>
-            <Carrousel/>
+            <div className="rental__container">
+                <Carrousel/>
+                <div className="rental__presentation">
+                    <h1>{rent.title}</h1>
+                    <p>{rent.location}</p>
+                </div>
+                
+                    <Host/>
+                    <Rating rating={rent.rating}/>
             
-            <h1>{rent.title}</h1>
-            <p>{rent.location}</p>
-            
-             <Tag tags={rent.tags}/>
-           
-            <div>
-                <Host/>
-                <Rating rating={rent.rating}/>
+                <Tag tags={rent.tags}/>
+                <section className="dropdown__container">
+                    <Dropdown title="Description" body={rent.description}/>
+                    <Dropdown title="Équipements" body={rent.equipments}/>
+                </section> 
             </div>
-            <section className="dropdown__container">
-                <Dropdown title="Description" body={rent.description}/>
-                <Dropdown title="Équipements" body={rent.equipments}/>
-            </section> 
-        </div>
+            
+        </>
     )
 }
