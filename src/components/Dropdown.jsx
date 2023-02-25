@@ -1,6 +1,6 @@
 import { useState } from "react"
-import down from "../asset/chevron-down-solid.svg"
-import up from "../asset/chevron-up-solid.svg"
+import { ReactComponent as DownChevron} from "../asset/chevron-down-solid.svg"
+import { ReactComponent as UpChevron } from "../asset/chevron-up-solid.svg"
 
 export default function Dropdown(props) {
   const isOpenState = useState(false)
@@ -11,7 +11,7 @@ export default function Dropdown(props) {
   return isOpen?(
     <article className="dropdown">
         <header className="dropdown__header" onClick={() => setIsOpen(false)}>
-            <h2>{props.title}</h2> <img src={up} className="up" alt="caché infos"></img>
+            <h2>{props.title}</h2> <UpChevron className="up" alt="caché infos"/>
         </header>
         <ul className="dropdown__body">
             { typeof(props.body)==="object"? (
@@ -23,7 +23,7 @@ export default function Dropdown(props) {
   ) : (
     <article className="dropdown">
         <header className="dropdown__header" onClick={() => setIsOpen(true)}>
-            <h2>{props.title}</h2> <img src={down} className="down" alt="ouvrir infos"></img>
+            <h2>{props.title}</h2> <DownChevron className="down" alt="ouvrir infos"/>
         </header>
     </article>
   )
