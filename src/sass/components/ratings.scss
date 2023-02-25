@@ -1,0 +1,13 @@
+.rating {
+    height: 3rem;
+    .star {
+        width: 2rem;
+        height: 3rem;
+        fill:#FF6060;
+    }
+    .starEmpty {
+        width: 2rem;
+        height: 3rem;
+        fill: #E3E3E3;
+    }
+}
