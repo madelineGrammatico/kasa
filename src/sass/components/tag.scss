@@ -1,0 +1,10 @@
+.tags__container {
+    display: flex;
+     gap: 1rem;
+    .tag {
+        padding: 0.5rem 3rem;
+        border-radius: 10px;
+        background-color: #FF6060;
+        color: #FFFFFF;
+    }
+}

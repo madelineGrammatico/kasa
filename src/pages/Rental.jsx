@@ -15,11 +15,12 @@ export function Rental() {
         <div>
             <NavBar/>
             <Carrousel/>
-            { rent.tags.map((tag) => {
-                return <Tag body={tag}/>
-            })}
+            
             <h1>{rent.title}</h1>
             <p>{rent.location}</p>
+            
+             <Tag tags={rent.tags}/>
+           
             <div>
                 <Host/>
                 <Rating rating={rent.rating}/>
