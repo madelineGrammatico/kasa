@@ -18,7 +18,7 @@ export function Rental() {
                 <Carrousel/>
                 <div className="rental__presentation">
                     <h1>{rent.title}</h1>
-                    <p>{rent.location}</p>
+                    <p className="rental__location">{rent.location}</p>
                 </div>
                 
                     <Host/>
