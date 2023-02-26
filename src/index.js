@@ -9,7 +9,8 @@ import About from './pages/About';
 import Page404 from './pages/Page404';
 import {Rental} from './pages/Rental';
 
-import data from "./logements.json"
+import dataRent from "./data/logements.json"
+import dataAbout from "./data/about.json"
 
 import reportWebVitals from './reportWebVitals';
 
@@ -17,15 +18,16 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Home/>,
-    loader: () => { return data }
+    loader: () => { return dataRent }
   },
   {
     path: "about",
-    element: <About/>
+    element: <About/>,
+    loader:() => { return dataAbout }
   },
   {
     path: "rental/:id",
-    loader: ({params}) => { return data.filter((rental) => (
+    loader: ({params}) => { return dataRent.filter((rental) => (
         rental.id === params.id.slice(1) ))
     },
     element: <Rental/>,
