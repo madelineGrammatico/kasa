@@ -22,8 +22,12 @@ export default function Carrousel() {
   return (
     <section className='carrousel'>
       <img src={rent.pictures[imgCarrousel]} alt={rent.title}/>
-      { activeCarousel && <LeftChevron onClick={ previousImg } className='left' alt="précedent"/> }
-      { activeCarousel && <RightChevron onClick={ nextImg } className='right' alt="suivant"/> }
+      { activeCarousel && 
+        <>
+          <LeftChevron onClick={ previousImg } className='left' alt="précedent"/> 
+          <RightChevron onClick={ nextImg } className='right' alt="suivant"/>
+          <p className='carrousel__page'>{imgCarrousel + 1} / {rent.pictures.length}</p>
+        </> }
     </section>
     
   )

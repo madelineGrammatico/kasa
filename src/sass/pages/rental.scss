@@ -3,34 +3,35 @@
     grid-template-rows: 1.6fr 0.6 0.3 1fr;
     grid-template-columns: auto auto;
     gap:1rem;
+    color: #FF6060;
+
     .carrousel{
         grid-row: 1;
         grid-column: 1 / span 2 ;
     }
+
     .rental__presentation {
         grid-row: 2;
-        grid-column: 1  ;
-        // h2{
-        //     width: 80%;
-        // }
+        grid-column: 1;
     }
+
     .hostProlile {
         grid-row: 2;
-        grid-column: 2  ;
+        grid-column: 2;
         justify-self:end;
         display: flex;
         gap: 1rem;
         align-items: flex-end;
         justify-content: flex-end;
-       
     }
+
     .tags__container {
         grid-row: 3;
-        grid-column: 1  ;
+        grid-column: 1;
     }
     .rating{
         grid-row: 3;
-        grid-column: 2  ;
+        grid-column: 2;
     }
     .dropdown__container {
         grid-row: 4;
