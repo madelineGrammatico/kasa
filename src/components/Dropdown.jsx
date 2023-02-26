@@ -13,12 +13,12 @@ export default function Dropdown(props) {
         <header className="dropdown__header" onClick={() => setIsOpen(false)}>
             <h2>{props.title}</h2> <UpChevron className="up" alt="caché infos"/>
         </header>
-        <ul className="dropdown__body">
-            { typeof(props.body)==="object"? (
-              props.body.map((item, index) => <li key={index} className="dropdown__body__item">{item}</li>)
-              ) : (
-              <p className="dropdown__body__item" >{props.body}</p>) }
-        </ul>
+          { typeof(props.body)==="object"? (
+            <ul className="dropdown__body">
+              { props.body.map((item, index) => <li key={index} className="dropdown__body__item">{item}</li>) }
+            </ul>
+            ) : (
+            <p className="dropdown__body" >{props.body}</p>) }
     </article>
   ) : (
     <article className="dropdown">
