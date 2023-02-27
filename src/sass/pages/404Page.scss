@@ -1,0 +1,26 @@
+.Page404 {
+    
+    color: #FF6060;
+    height: 100%;
+    .messageError{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        h1 {
+            font-size: 15rem;
+            font-weight: 700;
+            margin: 2rem 0;
+        }
+        h2{
+            margin: 0;
+        }
+        .Page404__returnHome {
+            margin: 12rem 0;
+            text-decoration: underline;
+            color: #FF6060;
+        }
+    }
+    
+}
