@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { 
   createBrowserRouter,
-  RouterProvider } from "react-router-dom"
+  RouterProvider,
+  redirect } from "react-router-dom"
 import './sass/index.scss';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -27,8 +28,11 @@ const router = createBrowserRouter([
   },
   {
     path: "rental/:id",
-    loader: ({params}) => { return dataRent.filter((rental) => (
-        rental.id === params.id.slice(1) ))
+    loader: ({params}) => { 
+      const data = dataRent.filter((rental) => (
+      rental.id === params.id.slice(1) ))
+      if (data.length !== 1) { return redirect("/")}
+      return data
     },
     element: <Rental/>,
   }, 
@@ -45,4 +49,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+reportWebVitals(console.log);

@@ -8,7 +8,6 @@ import { Banner } from "../components/Banner";
 
 function About() {
   const abouts = useLoaderData()
-  console.log(abouts)
   return (
     <div className="About">
       <NavBar/>

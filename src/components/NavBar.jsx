@@ -1,7 +1,4 @@
-import {
-  Link,
-  NavLink
-  } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../asset/LOGO.svg"
 
 export default function NavBar() {
@@ -15,6 +12,7 @@ export default function NavBar() {
         <nav>
             {arrayNav.map((nav) => (
               <NavLink 
+                key={nav.name}
                 to={nav.href} 
                 className={({isActive}) => { return (isActive ?  "active": null) }}
               >{nav.name}</NavLink>
