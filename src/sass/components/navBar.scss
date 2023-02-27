@@ -7,7 +7,7 @@ header {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        gap: 2.5rem;
+        gap: 1.5rem;
     }
     a {
         text-decoration: none;
@@ -18,5 +18,17 @@ header {
     }
     .logo {
         align-self: flex-start;
+        width: 9rem;
+    }
+}
+
+@media #{$medium-up} {
+    header {
+        nav {
+            gap: 2.5rem;
+        }
+        .logo {
+            width: inherit;
+        }
     }
 }
