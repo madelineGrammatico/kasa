@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import logo from "../asset/LOGO.svg"
+import { ReactComponent as logo} from "../asset/LOGO.svg"
 
 export default function NavBar() {
   const arrayNav = [

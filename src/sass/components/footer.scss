@@ -1,0 +1,16 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+    background-color: #000000;
+    color: #FFFFFF;
+    gap: 1rem;
+}
+@media #{$medium-up} {
+    footer {
+        padding: 6rem 0 2rem 0;
+        gap: 3rem;
+    }
+}
