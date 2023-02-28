@@ -1,8 +1,8 @@
-body {
+ .Home{
     padding: 1rem;
 }
 @media #{$medium-up} {
-    body {
+    .Home {
         
         padding: 1rem 3rem;
     }
