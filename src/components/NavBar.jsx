@@ -7,7 +7,7 @@ export default function NavBar() {
     { name:"A propos", href:"/about" }
   ]
   return (
-    <header>
+    <header className="NavBar">
         <Logo className="logo" alt="kasa"/>
         <nav>
             {arrayNav.map((nav) => (

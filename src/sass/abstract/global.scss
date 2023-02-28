@@ -5,7 +5,12 @@ body {
     
     #root{
         display: grid;
-        grid-template-rows: 8vh 90vh auto;
+        grid-template-rows: 8vh auto auto;
+        grid-template-columns: 1fr;
         justify-content: flex-start;
+
+        main {
+            min-height: 90vh;
+        }
     }
 }
