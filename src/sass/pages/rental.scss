@@ -1,10 +1,11 @@
 .rental__container {
     display:  grid;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto 1fr;
     grid-template-columns: auto auto;
     gap: 1rem;
     color: #FF6060;
     align-items: start;
+    justify-content: flex-start;
 
     .carrousel{
         grid-row: 1;
@@ -52,11 +53,13 @@
 @media #{$medium-up} {
     .rental__container {
         // display:  grid;
-        grid-template-rows: auto auto auto auto;
+        grid-template-rows: auto auto auto 1fr;
         // grid-template-columns: auto auto;
-        // gap:1rem;
+        gap:1rem;
         // color: #FF6060;
         // align-items: start;
+        // width: 100%;
+        justify-content: space-between;
     
         .carrousel{
             // grid-row: 1;

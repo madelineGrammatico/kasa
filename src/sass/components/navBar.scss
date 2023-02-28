@@ -1,5 +1,6 @@
 .NavBar {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1rem 0 1rem;
@@ -17,7 +18,7 @@
         text-decoration: underline;
     }
     .logo {
-        align-self: flex-start;
+        align-self: center;
         width: 7rem;
         height: 100%;
         color:#FF6060;
@@ -26,7 +27,7 @@
 
 @media #{$medium-up} {
     .NavBar {
-        padding: 2rem 3rem;
+        padding: 2rem 3rem 0rem 3rem;
 
         nav {
             gap: 2.5rem;
