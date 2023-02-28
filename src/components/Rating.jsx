@@ -4,8 +4,7 @@ import { ReactComponent as Star} from '../asset/star-solid.svg'
 
 
 
-export default function Rating(props) {
-  const rating = props.rating
+export default function Rating({rating}) {
   const range = [1, 2, 3, 4, 5]
 
   return (

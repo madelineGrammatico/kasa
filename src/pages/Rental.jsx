@@ -7,12 +7,11 @@ import Carrousel from "../components/Carrousel"
 import Tags from "../components/Tags"
 
 export function Rental() {
-    const data = useLoaderData()
-    const rent = data[0]
+    const [rent] = useLoaderData()
 
     return (
         <main className="rental__container">
-            <Carrousel/>
+            <Carrousel pictures={rent.pictures}/>
             <div className="rental__presentation">
                 <h1>{rent.title}</h1>
                 <p className="rental__location">{rent.location}</p>

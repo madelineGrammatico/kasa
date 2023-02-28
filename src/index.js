@@ -33,7 +33,6 @@ const router = createBrowserRouter([
       {
         path: "rental/:id",
         loader: ({params}) => { 
-          console.log(params)
           const data = dataRent.filter((rental) => (
           rental.id === params.id.slice(1) ))
           if (data.length !== 1) { return redirect("/home")}
