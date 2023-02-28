@@ -17,7 +17,10 @@ import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+
+  },
+  {
+    path: "/home",
     element: <Home/>,
     loader: () => { return dataRent }
   },
@@ -31,7 +34,7 @@ const router = createBrowserRouter([
     loader: ({params}) => { 
       const data = dataRent.filter((rental) => (
       rental.id === params.id.slice(1) ))
-      if (data.length !== 1) { return redirect("/")}
+      if (data.length !== 1) { return redirect("/home")}
       return data
     },
     element: <Rental/>,

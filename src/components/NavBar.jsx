@@ -1,14 +1,14 @@
 import { NavLink } from "react-router-dom";
-import { ReactComponent as logo} from "../asset/LOGO.svg"
+import { ReactComponent as Logo} from "../asset/LOGO.svg"
 
 export default function NavBar() {
   const arrayNav = [
-    { name:"Accueil", href:"/" },
+    { name:"Accueil", href:"/home" },
     { name:"A propos", href:"/about" }
   ]
   return (
     <header>
-        <img src={logo} className="logo" alt="kasa"/>
+        <Logo className="logo" alt="kasa"/>
         <nav>
             {arrayNav.map((nav) => (
               <NavLink 
