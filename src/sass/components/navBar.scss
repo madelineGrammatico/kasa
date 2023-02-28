@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 1rem 0 1rem;
     nav {
         display: flex;
         justify-content: flex-end;
@@ -18,13 +18,14 @@
     }
     .logo {
         align-self: flex-start;
-        width: 9rem;
+        width: 7rem;
+        height: 100%;
         color:#FF6060;
     }
 }
 
 @media #{$medium-up} {
-    header {
+    .NavBar {
         padding: 2rem 3rem;
 
         nav {

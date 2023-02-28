@@ -10,7 +10,25 @@ body {
         justify-content: flex-start;
 
         main {
-            min-height: 90vh;
+            min-height: 92vh;
+            padding: 1rem;
         }
     }
+}
+@media #{$medium-up} {
+   body {
+        #root{
+            display: grid;
+            grid-template-rows: 15vh auto auto;
+            grid-template-columns: 1fr;
+            justify-content: flex-start;
+
+            main {
+                min-height: 90vh;
+                padding: 2rem 3rem;
+            }
+        }
+   }
+    
+
 }

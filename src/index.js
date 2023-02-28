@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import { 
   createBrowserRouter,
   RouterProvider,
-  redirect, 
+  redirect,
+  Navigate, 
 } from "react-router-dom"
 
 import './sass/index.scss';
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
     path:"/",
     element:<RootLayout/>,
     children: [
+      {
+        index: true,
+        element: <Navigate to="/home" replace/>
+      },
       {
         path: "rental/:id",
         loader: ({params}) => { 
