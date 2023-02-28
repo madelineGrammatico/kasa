@@ -6,7 +6,7 @@
         grid-auto-flow: row;
         gap: 1rem;
     .tag {
-        padding: 0.2rem 0.5rem;
+        padding: 0.2rem 1.5rem;
         border-radius: 10px;
         background-color: #FF6060;
         color: #FFFFFF;
@@ -14,24 +14,25 @@
         text-overflow: ellipsis;
         white-space: nowrap;
         font-size: 0.8rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: block;
+        text-align: center;
+        
     }
 }
 @media #{$medium-up} {
     .tags__container {
         // display: flex;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        width: inherit;
+        width: 100%;
         //  gap: 1rem;
         .tag {
-            padding: 0rem .5rem;
+            padding: 0rem 1.5rem;
             // border-radius: 10px;
             height: 2rem;
             // background-color: #FF6060;
             // color: #FFFFFF;
            font-size: inherit;
+           
         }
     }
 }

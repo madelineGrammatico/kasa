@@ -4,7 +4,7 @@ import {
   createBrowserRouter,
   RouterProvider,
   redirect, 
-  useNavigate} from "react-router-dom"
+} from "react-router-dom"
 
 import './sass/index.scss';
 
@@ -31,10 +31,7 @@ const router = createBrowserRouter([
           console.log(params)
           const data = dataRent.filter((rental) => (
           rental.id === params.id.slice(1) ))
-          if (data.length !== 1) { return redirect("/")}
-          // if (data.length !== 1) { 
-          //   const navigate = useNavigate()
-          //   return navigate }
+          if (data.length !== 1) { return redirect("/home")}
           return data
         },
         element: <Rental/>,
