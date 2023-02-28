@@ -1,7 +1,7 @@
 .rating {
     height: 3rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
 
     .star {
         width: 2rem;
@@ -12,5 +12,23 @@
         width: 2rem;
       
         fill: #E3E3E3;
+    }
+}
+@media #{$medium-up} {
+    .rating {
+        // height: 3rem;
+        // display: flex;
+        justify-content: flex-end;
+    
+        // .star {
+        //     width: 2rem;
+            
+        //     fill:#FF6060;
+        // }
+        // .starEmpty {
+        //     width: 2rem;
+          
+        //     fill: #E3E3E3;
+        // }
     }
 }
