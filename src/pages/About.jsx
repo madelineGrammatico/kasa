@@ -10,7 +10,13 @@ function About() {
     <main className="About">
       <Banner banner={bannerAbout}/>
       <section className="dropdown__container">
-        {abouts.map((about) => <Dropdown title={about.title} body={about.body} key={about.id}/>)}
+        {
+          abouts.map((about) => 
+            <Dropdown title={about.title} key={about.id}>
+              {about.body}
+            </Dropdown>
+          )
+        }
       </section>
     </main>
   );
