@@ -22,8 +22,8 @@ export function Rental() {
         
             <Tags tags={rent.tags}/>
             <section className="dropdown__container">
-                <Dropdown title="Description" body={rent.description}/>
-                <Dropdown title="Équipements" body={rent.equipments}/>
+                <Dropdown title="Description" >{rent.description}</Dropdown>
+                <Dropdown title="Équipements" >{rent.equipments}</Dropdown>
             </section> 
             
         </main>
