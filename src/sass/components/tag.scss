@@ -1,11 +1,11 @@
 .tags__container {
     display: grid;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto;
     grid-template-columns: auto auto;
     grid-auto-flow: row;
     justify-content: flex-start;
     align-items: start;
-    gap: 1rem;
+    gap: 0.5rem;
     .tag {
         padding: 0.2rem 1.5rem;
         border-radius: 10px;
@@ -26,7 +26,7 @@
         width: 100%;
         .tag {
             padding: 0.5rem 1.5rem;
-           font-size: inherit;
+        //    font-size: inherit;
            margin: auto;
            
         }

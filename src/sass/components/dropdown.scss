@@ -24,7 +24,7 @@
             align-items: center;
 
             h2 {
-                font-size: 1rem;
+                font-size: 0.8rem;
                 margin:0;
                 padding:0;
             }
@@ -45,7 +45,7 @@
             grid-column: 1 ;
             z-index: -1;
             color: #FF6060;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             font-weight: 400;
             margin: 0;
             li{
@@ -61,7 +61,7 @@
             .dropdown__header{
                 height: 4.5rem;
                 h2 {
-                    font-size: inherit;
+                    font-size: 1rem;
                 }
     
                 .down, .up{
@@ -71,6 +71,7 @@
             
             .dropdown__body{
                 padding: 6rem 1rem 2rem 1rem;
+                font-size: 1rem;
             }
         }
     }
