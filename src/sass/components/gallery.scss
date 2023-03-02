@@ -43,6 +43,9 @@
            
         }
     }
+    .gallery__article:hover{
+        filter: brightness(85%);
+    }
 }
 @media #{$medium-up} {
     .gallery {

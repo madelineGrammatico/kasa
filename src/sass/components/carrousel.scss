@@ -27,6 +27,10 @@
         
     }
 
+    .left:hover, .right:hover {
+        fill: #FF6060;
+    }
+
     .left{
         grid-column: 1 ;
         grid-row: 2 ;

@@ -36,6 +36,9 @@
                 padding:0;
             }
         }
+        .dropdown__header:hover {
+            filter: brightness(85%);
+        }
         
         .dropdown__body{
             background: #F7F7F7;
