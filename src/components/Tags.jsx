@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Tag(props) {
+export function Tags(props) {
   const tags = props.tags
   return (
   <section className='tags__container'>

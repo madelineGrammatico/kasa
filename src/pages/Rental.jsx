@@ -1,12 +1,11 @@
 import { useLoaderData } from "react-router-dom"
 
 import { Dropdown } from "../components/Dropdown"
-// import { Host } from "../components/Host"
 import { HostName } from "../components/HostName"
 import { HostProfil } from "../components/HostProfil"
 import Rating from "../components/Rating"
 import Carrousel from "../components/Carrousel"
-import Tags from "../components/Tags"
+import { Tags } from "../components/Tags"
 
 export function Rental() {
     const [rent] = useLoaderData()
