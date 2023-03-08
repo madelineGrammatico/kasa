@@ -17,7 +17,7 @@ export function Rental() {
                 <p className="rental__location">{rent.location}</p>
             </div>
             
-                <Host/>
+                <Host name={rent.host.name}/>
                 <Rating rating={rent.rating}/>
         
             <Tags tags={rent.tags}/>

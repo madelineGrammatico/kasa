@@ -1,15 +1,18 @@
 import React from 'react'
 
 
-import HostName from './HostName'
-import HostPhoto from './HostPhoto'
+export default function Host({name}, {picture}) {
+  const array = name.split(" ")
+  const firstName = array.shift()
+  const lastName = array.join(" ")
 
-export default function Host() {
-  
   return (
     <section className='hostProfile'>
-      <HostName/>
-      <HostPhoto/>
+      <div className='hostName'>
+        <p>{firstName}</p>
+        <p>{lastName}</p>
+      </div>
+      <img src={picture} className="hostPicture" alt={`profile of${name}`}/>
     </section>
   )
 }
