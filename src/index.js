@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import { 
   createBrowserRouter,
   RouterProvider,
-  redirect,
   Navigate, 
 } from "react-router-dom"
 
@@ -19,6 +18,7 @@ import dataRent from "./data/logements.json"
 import dataAbout from "./data/about.json"
 
 import reportWebVitals from './reportWebVitals';
+import { rentalLoader } from './routes/rentalLoader';
 
 
 const router = createBrowserRouter([
@@ -32,12 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path: "rental/:id",
-        loader: ({params}) => { 
-          const data = dataRent.filter((rental) => (
-          rental.id === params.id.slice(1) ))
-          if (data.length !== 1) { return redirect("/home")}
-          return data
-        },
+        loader: ({params}) => { return rentalLoader(params.id) },
         element: <Rental/>,
       }, 
       {
