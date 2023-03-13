@@ -24,7 +24,7 @@ export function Rental() {
             </div>
 
             <section className='hostProfile'>
-                <HostName fistName={firstName} lastName={lastName}/>
+                <HostName firstName={firstName} lastName={lastName}/>
                 <HostProfil name={rent.host.name} profil ={rent.host.picture}/>
              </section>
                 

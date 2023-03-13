@@ -36,22 +36,24 @@
         color: #FFFFFF;
     }
 }
-@media #{$medium-up} {.banner {
+@media #{$large-up} {
+    .banner {
    
-    height: 223px; 
-    border-radius: 25px;
-    margin-bottom: 2.5rem;
-    
-    .banner__img {
         height: 223px; 
-    }
-    
-    .banner__shadow {
-        height: 223px;
-    }
+        border-radius: 25px;
+        margin-bottom: 2.5rem;
+        
+        .banner__img {
+            height: 223px; 
+        }
+        
+        .banner__shadow {
+            height: 223px;
+        }
 
-    h1 {
-       flex-direction: row;
-       gap: 0.3rem;
+        h1 {
+        flex-direction: row;
+        gap: 0.3rem;
+        }
     }
-}}
+}
