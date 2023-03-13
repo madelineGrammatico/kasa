@@ -11,7 +11,7 @@
         font-size: 0.8rem;
     }
 }
-@media #{$medium-up} {
+@media #{$small-up} {
     .tags__container {
         gap:1rem;
         width: 100%;

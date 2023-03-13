@@ -14,7 +14,7 @@
         margin: 0;
     }
 }
-@media #{$medium-up} {
+@media #{$small-up} {
     .rental__presentation {
         display: flex;
         flex-direction: column;

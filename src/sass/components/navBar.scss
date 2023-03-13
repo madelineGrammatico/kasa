@@ -26,6 +26,7 @@
         width: 7rem;
         height: 100%;
         color:#FF6060;
+        
     }
 }
 
@@ -36,35 +37,19 @@
         nav {
             gap: 2.5rem;
         }
-        // .logo {
-        //     width: 7rem;
-            
-        // }
     }
 }
 @media #{$medium-up} {
     .NavBar {
-        padding: 2rem 3rem 0rem 3rem;
-
-        nav {
-            gap: 2.5rem;
-        }
         .logo {
             width: 7rem;
-            // height: fi;
         }
     }
 }
 @media #{$large-up} {
     .NavBar {
-        padding: 2rem 3rem 0rem 3rem;
-
-        nav {
-            gap: 2.5rem;
-        }
         .logo {
             width: 10rem;
-            // height: fi;
         }
     }
 }
