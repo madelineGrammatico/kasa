@@ -1,9 +1,12 @@
 import 
 { Link,
-  useLoaderData } from "react-router-dom"
+  // useLoaderData 
+} from "react-router-dom"
+
+import dataRent from "../data/logements.json"
 
 export default function Gallery() {
-  const data = useLoaderData()
+  const data = dataRent
   
   return (
     <section className="gallery">

@@ -5,7 +5,7 @@ function Page404() {
     <main className="Page404">
       <h1>404</h1>
       <h2>Oups! La page que vous demandez n'existe pas.</h2>
-      <Link to="/home" className="Page404__returnHome">Retourner sur la page d’accueil </Link>
+      <Link to="/" className="Page404__returnHome">Retourner sur la page d’accueil </Link>
     </main>
   );
 }

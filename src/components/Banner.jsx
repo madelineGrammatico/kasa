@@ -1,7 +1,6 @@
 
 
 export function Banner({banner, text=""}) {
-  console.log(text)
   return (
     <section className="banner">
         <div className="banner__shadow"></div>

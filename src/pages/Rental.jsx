@@ -1,4 +1,7 @@
-import { useLoaderData } from "react-router-dom"
+import React from 'react'
+import { useParams } from "react-router-dom"
+import { useEffect } from "react"
+import { useNavigate } from "react-router-dom"
 
 import { Dropdown } from "../components/Dropdown"
 import { HostName } from "../components/HostName"
@@ -7,12 +10,28 @@ import Rating from "../components/Rating"
 import Carrousel from "../components/Carrousel"
 import { Tags } from "../components/Tags"
 
+import dataRent from "../data/logements.json"
+import { IsIdCorrect } from '../routes/loaderRent'
+
 export function Rental() {
-    const [rent] = useLoaderData()
+    const { id } = useParams()
+    const rent = dataRent.find(rental => rental.id === id.slice(1))
+    // IsIdCorrect(rent)
+    const navigate = useNavigate()
+    useEffect(() => { 
+        if (!rent) { 
+        console.log("hey")
+        return navigate("/*")}
+        else {
+            console.log('yo')
+        }
+    
+    }, [])
+    let firstName
+    let lastName
     const arrayHost = rent.host.name.split(" ")
-    const firstName = arrayHost.shift()
-    const lastName = arrayHost.join(" ")
-    console.log(firstName, lastName)
+            firstName = arrayHost.shift()
+            lastName = arrayHost.join(" ")
 
     return (
         <main className="rental__container">
@@ -26,7 +45,7 @@ export function Rental() {
             <section className='hostProfile'>
                 <HostName firstName={firstName} lastName={lastName}/>
                 <HostProfil name={rent.host.name} profil ={rent.host.picture}/>
-             </section>
+            </section>
                 
             
 
@@ -49,4 +68,6 @@ export function Rental() {
             
         </main>
     )
+
+    
 }

@@ -3,7 +3,7 @@ import { ReactComponent as Logo} from "../asset/LOGO.svg"
 
 export default function NavBar() {
   const arrayNav = [
-    { name:"Accueil", href:"/home" },
+    { name:"Accueil", href:"/" },
     { name:"A propos", href:"/about" }
   ]
   return (
