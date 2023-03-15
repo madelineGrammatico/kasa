@@ -1,7 +1,6 @@
 import {
     Routes,
     Route,
-    useParams
 } from "react-router-dom"
 
 import Home from '../pages/Home';
